@@ -5,39 +5,65 @@
         <title>Register With Us</title>
     </head>
     <body>
-        <form method="POST" action="https://requestb.in/1jewxii1">
+        <h1>Register With Us!</h1>
+        <p>it will only take a minute.</p>
+        <hr>
+            <form method="GET" action="https://requestb.in/1jewxii1">
 
-            <label for="username">User Name:</label>
-            <input id="username" name="username">
+                <label for="username">User Name:</label>
+                <input id="username" name="username">
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
-            <input type="submit" value="login">
-            <br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+                <input type="submit" value="login">
 
-            <label>Bio</label>
-            <br>
-            <label>
-                <textarea name="bio" rows="5" cols="20">text here</textarea>
-            </label>
+                <br>
+                <br>
+                <br>
 
-            <br>
+                <label><strong>Bio</strong></label>
+                <br>
+                <label>
+                    <textarea name="bio" rows="10" cols="70" placeholder="Enter text here..."></textarea>
+                </label>
 
-            <label>How did you hear about us?</label>
-            <br>
-            <label>
-                <input type="radio" name="type" value="billboard">Billboard
-            </label>
-            <label>
-                <input type="radio" name="type" value="radio">Radio Advertisement
-            </label>
-            <label>
-                <input type="radio" name="type" value="internet"> Internet Advertisement
-            </label>
-            <label>
-                <input type="radio" name="type" value="other">Other
-            </label>
+                <br>
+                <br>
+                <br>
 
+                <label>How did you hear about us?</label>
+                <br>
+                <br>
+                <label>
+                    <input type="radio" name="type" value="billboard">Billboard
+                </label>
+                <label>
+                    <input type="radio" name="type" value="radio">Radio Advertisement
+                </label>
+                <label>
+                    <input type="radio" name="type" value="internet"> Internet Advertisement
+                </label>
+                <label>
+                    <input type="radio" name="type" value="other">Other
+                </label>
+
+                <br>
+                <br>
+                <br>
+
+                <label for="browser">What web browser do you use?</label>
+                <br>
+                <br>
+                <select id="browser" name="browser">
+                    <option value="safari">Safari</option>
+                    <option value="chrome">Chrome</option>
+                    <option value="firefox">Fire Fox</option>
+                </select>
+                <br>
+                <br>
+                <br>
+                <button name="submit">Submit</button>
         </form>
+        <hr>
     </body>
 </html>
