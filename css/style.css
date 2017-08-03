@@ -1,16 +1,34 @@
-header {
-    text-align: center;
+body{
+    margin: 0px;
+    padding: 0px;
 }
 
-
-.fancy-header {
-    color: #CC14FF;
+.my_header{
+    text-align: center;
+    color: #c8f8c7;
+    background-color: #186c80;
+    margin-bottom: auto;
+    padding: 30px 0px 20px 0px ;
+    border: 4px solid #808080;
+    overflow: hidden;
+    font-family: 'Changa one';
+    font-size: 20px;
 }
 
-.text {
+.login{
+    border: 4px solid #000;
     text-align: center;
+    margin-auto: auto;
+    padding: 50px 0px 50px 0px ;
+    float: right;
+}
+.login_button {
+    border: 1px solid black;
+    margin: 30px;
+    border-radius: 5px;
+    background-color: #186c80;
 }
 
-.images {
-    text-align: center;
+.bio_wrapper{
+    border: 1px solid black;
 }
