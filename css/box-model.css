@@ -9,10 +9,6 @@ h1 {
     margin-left: 30px;
 }
 
-#container {
-    border: 1px solid #000;
-}
-
 .box {
     height: 100px;
     width: 100px;
@@ -35,7 +31,7 @@ h1 {
 
 #box3 {
     background-color: #FFFF00;
-    margin-left: 90px;
+    margin-left: 90px;;
 }
 
 #box4 {
@@ -52,3 +48,19 @@ h1 {
     background-color: #FFC0CB;
     margin-left: 180px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
