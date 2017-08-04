@@ -6,61 +6,56 @@ body {
 h1 {
     text-decoration: underline;
     color: #803B76;
-    margin-left: 30px;
+    margin-left: 10px;
+    margin-bottom: 25px;
 }
 
 .box {
-    height: 100px;
-    width: 100px;
-    padding: 0 100px 0 10px;
+    height: 50px;
+    width: 50px;
+    padding: 10px;
     border: 1px solid black;
-    margin:0 0 10px 10px;
+    margin:25px;
     font-weight: bold;
     color: #fff;
+    float: left;
+    font-size: 17px;
+    postition: relative;
+}
+
+#container :nth-child(4) {
+    clear: left;
 }
 
 #box1 {
     background-color: #FF0000;
-    margin-left: 30px;
 }
 
 #box2 {
     background-color: #FFA500;
-    margin-left: 60px;
 }
 
 #box3 {
     background-color: #FFFF00;
-    margin-left: 90px;;
 }
 
 #box4 {
     background-color: #008000;
-    margin-left: 120px;
+
 }
 
 #box5 {
     background-color: #0000FF;
-    margin-left: 150px;
 }
 
 #box6 {
     background-color: #FFC0CB;
-    margin-left: 180px;
 }
 
+.arrow {
+    position: relative;
+    top: -110px;
+    right: -40px;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
