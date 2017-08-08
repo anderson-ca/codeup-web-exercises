@@ -1,0 +1,231 @@
+/******************
+
+   Desktop Version.
+
+******************/
+
+body {
+    /*width: 95%;*/
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+}
+
+
+
+/*****************
+
+     Header
+
+******************/
+
+.alert-info {
+    display:none;
+}
+
+h1 {
+    float:left;
+    padding: 25px 0 0 0;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+h2 {
+    font-weight: bolder;
+}
+
+
+/*************************
+
+    Navigation Styles.
+
+**************************/
+
+.nav-links {
+    float: right;
+    display: inline;
+    list-style-type: none;
+    /*clear: left;*/
+    margin: 70px 20px 50px 0;
+    padding: 0 0 10px 0;
+}
+
+li {
+    display: inline;
+    margin: 0 10px 0 10px;
+}
+
+.main-pic {
+    /*width: 100%;*/
+    background-position: center;
+}
+
+
+
+/**************
+
+  Main Section.
+
+****************/
+
+.main {
+    float: left;
+    /*width: 70%;*/
+    clear: both;
+}
+
+.sub-section {
+    float: right;
+    width: 25%;
+    margin: 0 5px 0 10px;
+    padding-right: 15px;
+}
+
+a:hover {
+    color: #808080;
+}
+
+
+
+/************
+
+   Footer.
+
+*************/
+
+footer {
+    padding-top: 50px;
+    clear: both;
+
+}
+
+#copyright {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+/************************
+
+    Social Media Links.
+
+ ************************/
+
+#twitter-logo {
+    height: 50px;
+    /*width: 50px;*/
+    float: right;
+    margin: 7px;
+}
+
+#facebook-logo {
+    height: 65px;
+    /*width: 65px;*/
+    float: right;
+    margin: 0 0 15px 0;
+}
+
+
+
+/**********************
+
+    Mobile Version.
+
+**********************/
+
+@media screen and (max-width:400px) {
+    body {
+        width: 95%;
+    }
+
+    h1 {
+        /*width: 100%;*/
+        padding: 0px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .nav-links li {
+        border: 1px solid #000;
+        /*width: 98%;*/
+        display: block;
+        margin: 0 5px 10px 20px;
+        padding: 5px 0 5px 0;
+        background-color: #B6B6B6;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    ul.nav-links {
+        /*width: 100%;*/
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        margin-top: 5px;
+    }
+
+    .main-pic {
+        /*width: 100%;*/
+        border: 2px solid #000;
+        border-radius: 10px;
+    }
+
+    .header-img {
+        height: 100%;
+        margin: 0 0 10px 0;
+    }
+
+    .h2 {
+        /*width: 100%;*/
+        margin-right: 0;
+    }
+
+    .main {
+        /*width: 90%;*/
+        margin-left: 15px;
+    }
+
+    .sub-section{
+        /*width: 90%;*/
+        margin-left: 10px;
+    }
+
+    .alert-info {
+        display: block;
+        border: 2px solid #919191;
+        text-align: center;
+        background-color: #9efff6;
+        padding: 10px 0 10px 0;
+        margin: 10px 2px 0 2px;
+        text-decoration: none;
+        color: #000;
+    }
+
+    .main-link {
+        text-decoration: none;
+        color: #000;
+    }
+
+    a:hover {
+        color: #000;
+    }
+
+    li:hover {
+        border: 3px solid black;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
