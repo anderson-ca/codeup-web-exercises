@@ -1,0 +1,46 @@
+/***********************************
+
+            Header Styles
+
+************************************/
+
+.jumbotron {
+    background-image: url(../img/pizza.png);
+    text-align: center;
+    opacity: 100%;
+    padding: 0;
+}
+
+h1 {
+    background-color: whitesmoke;
+    opacity: .65;
+    font-weight: bolder;
+}
+
+.jumbotron h1 {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
+
+/*************************************
+
+        Choose Pizza Panel Styles
+
+**************************************/
+
+.radio-inline {
+    padding-bottom: 30px;
+}
+
+.list-group-item {
+    font-weight: bold;
+}
+
+.panel-footer {
+    text-align: right;
+}
+
+#mid-footer {
+    margin-bottom: 25px;
+}
