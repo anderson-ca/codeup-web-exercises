@@ -11,16 +11,14 @@
     padding: 0;
 }
 
-h1 {
-    background-color: whitesmoke;
-    opacity: .65;
-    font-weight: bolder;
-}
-
 .jumbotron h1 {
     margin-left: 0;
     margin-right: 0;
     width: 100%;
+    background-color: whitesmoke;
+    opacity: .65;
+    font-weight: bolder;
+    color: #000;
 }
 
 /*************************************
