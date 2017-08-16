@@ -5,33 +5,12 @@
     <title>inline js</title>
 </head>
 <body>
-<h1>Wootang Name Generator</h1>
 <script>
     'use strict';
 
-    'use strict';
-
-    document.write("<h2>let's find out</h2>")
-
-    var user = prompt("enter name to find out your're wootang name");
-
-    var wootangList = ["String Jam-Joe", "Disaster Mestah", "Big Money JizzaH", "Pink Papadragon", "Dr. Galactus", "Silver Unicorn Md.", "Flap joe dirt-bag", "Twistah Killah!!"];
-
-    function wootangFunc() {
-
-        var randNum = Math.floor(Math.random() * 8) +1;
-
-        var newName = wootangList[randNum];
-
-        return newName;
-
+    for (var i = 100; i >= 0; i -= 5) {
+        console.log(i);
     }
-
-
-    var xKillah = wootangFunc();
-
-
-    document.write("from now on you shell ne known as " + xKillah);
 
 </script>
 </body>

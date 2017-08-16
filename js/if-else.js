@@ -51,11 +51,11 @@ var cameron = 180;
 
 var ryan = 250;
 
-var ryanTotal =  ryan - (ryan /10);
+var ryanTotal =  ryan - (ryan / 10);
 
 var george = 320;
 
-var georgeTotal =  george - (george /10);
+var georgeTotal =  george - (george / 10);
 
 var costumer = ryan;
 
@@ -75,16 +75,17 @@ switch (costumer) {
 }
 
 
-
 /********************************************************************/
 /********************************************************************/
 /********************************************************************/
 
 var coinToss = Math.floor(Math.random() * 2) + 1;
 
+var decision;
 
-(coinToss === 1)?console.log("Buy car"):console.log("Buy house");
+(coinToss === 1) ? decision = "Buy car" : decision = "Buy house";
 
+console.log(decision);
 
 /********************************************************************/
 /********************************************************************/
@@ -92,28 +93,27 @@ var coinToss = Math.floor(Math.random() * 2) + 1;
 
 var luckyNumer = Math.floor(Math.random() * 6) + 1;
 
-
 switch (luckyNumer) {
     case 0:
         console.log("no discount");
-    break;
+        break;
     case 1:
-        console.log("10%")
-    break;
+        console.log("10%");
+        break;
     case 2:
-        console.log("25%")
+        console.log("25%");
         break;
     case 3:
-        console.log("30%")
+        console.log("30%");
         break;
     case 4:
-        console.log("50%")
+        console.log("50%");
         break;
     case 5:
-        console.log("all free")
+        console.log("all free");
         break;
     case 6:
-        console.log("$60 receipt")
+        console.log("$60 receipt");
         break;
 }
 
@@ -121,30 +121,35 @@ switch (luckyNumer) {
 /********************************************************************/
 /********************************************************************/
 /********************************************************************/
+
 
 var confirmation = confirm("would you like to enter a number?")
 
 if (confirmation) {
     var userNum = prompt("enter a number");
-}
 
+    if (userNum % 2 === 0 && userNum >= 0) {
+        alert("the number is even");
+        alert(userNum + " plus 100 is " + (parseInt(userNum) + 100));
+        alert("the number is positive");
+    } else if (userNum % 2 === 0 && userNum < 0) {
+        alert("the number is even");
+        alert(userNum + " plus 100 is " + (parseInt(userNum) + 100));
+        alert("the number is negative");
+    } else if (userNum % 2 !== 0 && userNum < 0) {
+        alert("the number is odd");
+        alert(userNum + " plus 100 is " + (parseInt(userNum) + 100));
+        alert("the number is negative");
+    } else if (userNum % 2 !== 0 && userNum >= 0) {
+        alert("the number odd");
+        alert(userNum + " plus 100 is " + (parseInt(userNum) + 100));
+        alert("the number is positive");
+    } else {
+        alert("This is not a number.");
+    }
 
-if (userNum % 2 === 0 && userNum >= 0) {
-    alert("the number is even");
-    alert(userNum + " plus 100 is " + (parseInt(userNum) + 100));
-    alert("the number is positive");
-} else if (userNum % 2 === 0 && userNum < 0) {
-    alert("the number is even");
-    alert(userNum + " plus 100 is " + (parseInt(userNum) + 100));
-    alert("the number is negative");
-} else if (userNum % 2 !== 0 && userNum < 0) {
-    alert("the number is odd");
-    alert(userNum + " plus 100 is " + (parseInt(userNum) + 100));
-    lert("the number is negative");
-} else if (userNum % 2 !== 0 && userNum >= 0) {
-    alert("the number odd");
-    alert(userNum + " plus 100 is " + (parseInt(userNum) + 100));
-    alert("the number is positive");
+} else {
+    alert("Have a nice day!");
 }
 
 
