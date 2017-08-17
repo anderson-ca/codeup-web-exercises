@@ -8,9 +8,25 @@
 <script>
     'use strict';
 
-    for (var i = 100; i >= 0; i -= 5) {
-        console.log(i);
+
+    var w = prompt("enter a number");
+    var q = "";
+
+    for (var x = 1; x <= w; x++) {
+
+        for (var y = 1; y < x; y++) {
+
+             q = q + " * ";
+
+        }
+
+            console.log(q);
+
+            q = "";
+
     }
+
+
 
 </script>
 </body>
