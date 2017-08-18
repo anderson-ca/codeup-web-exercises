@@ -7,11 +7,12 @@
 <body>
 <script>
 
-    (function() {
+    (function () {
         ///////////////////// say hello function.
         function sayHello(name) {
             return "Hello, " + name;
         }
+
         ////////////////////// calling func and assigning to variable.
         var myName = "Anderson";
         var helloMessage = sayHello(myName);
@@ -20,28 +21,30 @@
 
         /////////////////////// isOdd function.
         var random = Math.floor((Math.random() * 100) + 1);
+
         function isOdd(number) {
-            var log = (number % 2 !== 0) ? "The number " + number + " is odd": "The number " + number + " is not odd";
+            var log = (number % 2 !== 0) ? "The number " + number + " is odd" : "The number " + number + " is not odd";
             return log;
         }
+
         ///////////////////////// calling is odd function.
 
         console.log(isOdd(random));
 
         //////////////////////// calculate tip function.
         function calculateTip(tip, bill) {
-            var total = (bill * tip);
+            var total = (bill * tip) / 100;
 
             return total;
         }
 
         var billTotal = prompt("Enter bill total");
 
-        var tipTotal = prompt("enter tip percentage in decimals");
+        var tipTotal = prompt("Enter the percentage you wish to tip");
 
         var checkout = calculateTip(tipTotal, billTotal);
 
-        console.log("Your total is " + billTotal + " and you should tip $ " + checkout);
+        console.log("Your total is $" + billTotal + " and you should tip $" + checkout + " in order to tip %" + tipTotal + " of the total amount");
 
 
     })();
