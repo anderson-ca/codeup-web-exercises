@@ -38,13 +38,17 @@
             return total;
         }
 
-        var billTotal = prompt("Enter bill total");
 
-        var tipTotal = prompt("Enter the percentage you wish to tip");
 
-        var checkout = calculateTip(tipTotal, billTotal);
 
-        console.log("Your total is $" + billTotal + " and you should tip $" + checkout + " in order to tip %" + tipTotal + " of the total amount");
+
+            var billTotal = prompt("Enter bill total");
+
+            var tipTotal = prompt("Enter the percentage you wish to tip");
+
+            var checkout = calculateTip(tipTotal, billTotal);
+
+            console.log("Your total is $" + billTotal + " and you should tip $" + checkout + " in order to tip %" + tipTotal + " of the total amount");
 
 
     })();
