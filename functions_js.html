@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    (function() {
+        ///////////////////// say hello function.
+        function sayHello(name) {
+            return "Hello, " + name;
+        }
+        ////////////////////// calling func and assigning to variable.
+        var myName = "Anderson";
+        var helloMessage = sayHello(myName);
+
+        console.log(helloMessage);
+
+        /////////////////////// isOdd function.
+        var random = Math.floor((Math.random() * 100) + 1);
+        function isOdd(number) {
+            var log = (number % 2 !== 0) ? "The number " + number + " is odd": "The number " + number + " is not odd";
+            return log;
+        }
+        ///////////////////////// calling is odd function.
+
+        console.log(isOdd(random));
+
+        //////////////////////// calculate tip function.
+        function calculateTip(tip, bill) {
+            var total = (bill * tip);
+
+            return total;
+        }
+
+        var billTotal = prompt("Enter bill total");
+
+        var tipTotal = prompt("enter tip percentage in decimals");
+
+        var checkout = calculateTip(tipTotal, billTotal);
+
+        console.log("Your total is " + billTotal + " and you should tip $ " + checkout);
+
+
+    })();
+
+</script>
+</body>
+</html>
