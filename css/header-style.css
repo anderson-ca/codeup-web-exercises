@@ -1,0 +1,352 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/*******************************************
+
+    Extra-Small screen header styling
+
+*********************************************/
+
+@media (max-width: 768px) {
+
+    #main-header {
+        height: 100px;
+        background-color: #CFCFCF;
+    }
+
+    .header-strip {
+        margin-top: 115px;
+        height: 150px;
+        margin-top: 115px;
+        background-color: #fff;
+        box-sizing: border-box;
+        width: 100%;
+        font-family: 'Abel', sans-serif;
+    }
+
+    .header-text {
+        font-family: 'Abel', sans-serif;
+        margin-top: 80px;
+    }
+
+    .img-size {
+        height: 250px;
+        width: auto;
+        position: relative;
+        top: -50px;
+    }
+
+    ul {
+        text-align: center;
+        margin: 20px 40px 0 0;
+    }
+
+    ul li {
+        font-family: 'Abel', sans-serif;
+        text-align: center;
+        list-style: none;
+        display: inline;
+        font-size: 25px;
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: #000;
+    }
+
+}
+
+/*************************************
+
+    Small screen header styling
+
+**************************************/
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+    #main-header {
+        height: 100px;
+        background-color: #CFCFCF;
+    }
+
+    .header-strip {
+        margin-top: 115px;
+        height: 80px;
+        margin-top: 20px;
+        background-color: #fff;
+        box-sizing: border-box;
+        width: 100%;
+        font-family: 'Abel', sans-serif;
+    }
+
+    .header-text {
+        font-family: 'Abel', sans-serif;
+        text-align: center;
+    }
+
+    .img-size {
+        height: 120px;
+        width: auto;
+        position: relative;
+        top: -20px;
+    }
+
+    ul {
+        text-align: center;
+        margin: 20px 40px 0 0;
+    }
+
+    ul li {
+        font-family: 'Abel', sans-serif;
+        text-align: center;
+        list-style: none;
+        display: inline;
+        font-size: 25px;
+        margin-left: 20px;
+        margin-top: 25px;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: #000;
+        margin-left: 10px;
+    }
+
+    .move-left {
+        position: relative;
+        left: -90px;
+        top: -167px;
+    }
+
+    .move-right {
+        position: relative;
+        right: -50px;
+        top: -167px;
+    }
+
+}
+
+/***************************************
+
+    Medium-A screen header styling
+
+***************************************/
+
+@media (min-width: 992px) and (max-width: 981px) {
+
+    #main-header {
+        height: 50px;
+        background-color: #CFCFCF;
+    }
+
+    .header-strip {
+        margin-top: 115px;
+        height: 60px;
+        margin-top: 5px;
+        background-color: #fff;
+        box-sizing: border-box;
+        width: 100%;
+        font-family: 'Abel', sans-serif;
+    }
+
+    .header-text {
+        font-family: 'Abel', sans-serif;
+        margin-top: 80px;
+        position: relative;
+        top: -126px;
+        left: -250px;
+        text-transform: lowercase;
+    }
+
+    .img-size {
+        height: 110px;
+        width: auto;
+        position: relative;
+        top: -25px;
+        left: -313px;
+    }
+
+    ul {
+        text-align: right;
+        margin: 20px 40px 0 0;
+        position: relative;
+        top: -182px;
+        right: -220px;
+    }
+
+    ul li {
+        font-family: 'Abel', sans-serif;
+        text-align: right;
+        list-style: none;
+        display: inline;
+        font-size: 25px;
+        margin-left: 10px;
+        margin-top: 20px;
+
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: #000;
+        font-size: 18px;
+        margin-left: 20px;
+    }
+
+    .jumbotron h1 {
+        font-size: 30px;
+    }
+
+}
+
+/***************************************
+
+    Medium-B screen header styling
+
+***************************************/
+
+@media (min-width: 981px) and (max-width: 1200px) {
+
+    #main-header {
+        height: 50px;
+        background-color: #CFCFCF;
+    }
+
+    .header-strip {
+        margin-top: 115px;
+        height: 60px;
+        margin-top: 5px;
+        background-color: #fff;
+        box-sizing: border-box;
+        width: 100%;
+        font-family: 'Abel', sans-serif;
+    }
+
+    .header-text {
+        font-family: 'Abel', sans-serif;
+        margin-top: 80px;
+        position: relative;
+        top: -126px;
+        left: -255px;
+    }
+
+    .img-size {
+        height: 110px;
+        width: auto;
+        position: relative;
+        top: -25px;
+        left: -415px;
+    }
+
+    ul {
+        text-align: right;
+        margin: 20px 40px 0 0;
+        position: relative;
+        top: -182px;
+    }
+
+    ul li {
+        font-family: 'Abel', sans-serif;
+        text-align: right;
+        list-style: none;
+        display: inline;
+        font-size: 25px;
+        margin-left: 10px;
+        margin-top: 20px;
+        text-align: right;
+
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: #000;
+        font-size: 18px;
+        margin-left: 20px;
+        text-align: right;
+    }
+
+    .jumbotron h1 {
+        font-size: 30px;
+    }
+
+}
+
+/***************************************
+
+    Large screen header styling
+
+***************************************/
+
+@media (min-width: 1200px) {
+
+    #main-header {
+        height: 300px;
+        background-color: #CFCFCF;
+    }
+
+    .header-strip {
+        margin-top: 115px;
+        height: 60px;
+        margin-top: 5px;
+        background-color: #fff;
+        box-sizing: border-box;
+        width: 200%;
+        font-family: 'Abel', sans-serif;
+    }
+
+    .header-text {
+        font-family: 'Abel', sans-serif;
+        margin-top: 80px;
+        position: relative;
+        top: -126px;
+        left: -250px;
+    }
+
+    .img-size {
+        height: 110px;
+        width: auto;
+        position: relative;
+        top: -25px;
+        left: -1140px;
+    }
+
+    ul {
+        text-align: right;
+        margin: 20px 40px 0 0;
+        position: relative;
+        top: -182px;
+        right: -90px;
+        max-width: 992px;
+    }
+
+    ul li {
+        font-family: 'Abel', sans-serif;
+        text-align: center;
+        list-style: none;
+        display: inline;
+        font-size: 25px;
+        margin-left: 10px;
+        margin-top: 20px;
+
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: #000;
+        font-size: 18px;
+        margin-left: 20px;
+    }
+
+    .jumbotron h1 {
+        font-size: 30px;
+    }
+
+    .jumbotron {
+        padding-bottom: 0;
+    }
+}
+
+

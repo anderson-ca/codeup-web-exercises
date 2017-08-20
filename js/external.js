@@ -1,15 +1,17 @@
 "use strict";
-
+//////////////////////////////////////////////////////////////////////
+///////////// SWITCH STATEMENT SOLUTION TO CHALLENGE /////////////////
+//////////////////////////////////////////////////////////////////////
 
 var cameron = 180;
 
 var ryan = 250;
 
-var ryanTotal =  ryan - (ryan /10);
+var ryanTotal = ryan - (ryan / 10);
 
 var george = 320;
 
-var georgeTotal =  george - (george /10);
+var georgeTotal = george - (george / 10);
 
 var costumer = ryan;
 

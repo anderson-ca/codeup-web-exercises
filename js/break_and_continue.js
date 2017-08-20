@@ -1,4 +1,7 @@
 "use strict";
+//////////////////////////////////////////////////////////////////////
+///////////////// EXAMPLE OF CONTINUE USAGE  /////////////////////////
+//////////////////////////////////////////////////////////////////////
 
 var userNum = prompt("enter an odd number between 1 and 50");
 
@@ -9,7 +12,6 @@ while (userNum % 2 === 0) {
 }
 
 console.log("Number to skip is: " + userNum);
-
 
 
 for (var i = 0; i <= 50; i++) {

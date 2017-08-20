@@ -1,0 +1,128 @@
+/**********************************************************
+
+    GENERAL CONTAINERS, ROWS, AND COLUMNS STYLES.
+
+***********************************************************/
+
+body {
+    background-color: #EEEEEE;
+    color: #000;
+}
+
+.container {
+    /*border: 1px solid #000;*/
+    max-width: 768px;
+    font-family: 'Anton';
+}
+
+.title-text {
+    font-size: 50px;
+}
+
+.row {
+    /*border: 1px solid #0b2e13;*/
+}
+
+.col {
+    /*border: 1px solid #007bff;*/
+    padding: 3%;
+}
+
+/**********************************************************
+
+               CIRCLES AND MID-SECTION STYLES.
+                    ( INCLUDING COLORS )
+
+***********************************************************/
+
+.circle {
+    border: 10px solid #fff;
+    width: auto;
+    height: 150px;
+    max-height: 70%;
+    border-radius: 50%;
+    padding-top: 50px;
+}
+
+#border-gray {
+    border-bottom: 2px solid #808080;
+}
+
+.circle-text {
+    color: #fff;
+    font-size: 25px;
+    position: relative;
+}
+
+#red {
+    background-color: #B52D10;
+}
+
+#orange {
+    background-color: #B54F04;
+}
+
+#green {
+    background-color: #10B50C;
+}
+
+#blue {
+    background-color: #3338B5;
+}
+
+/**********************************************************
+
+  BOTTOM SECTION, IMAGES AND GENERAL PRESENTATION STYLES.
+
+***********************************************************/
+
+img {
+    max-width: 80%;
+    border-radius: 10%;
+}
+
+#odd {
+    padding-bottom: 7px;
+}
+
+.thumbnail {
+    border-radius: 15px;
+}
+
+.presentation-img {
+    min-height: 100%;
+}
+
+.small-img {
+    height: auto;
+    width: 30%;
+}
+
+.small-right-text {
+    position: relative;
+    top: -40px;
+    right: -65px;
+    max-width: 70%;
+    font-size: 15px;
+}
+
+#bird {
+    height: 60px;
+    width: auto;
+    margin: 0 20px 20px 0;
+}
+
+#bird-word {
+    font-weight: normal;
+    font-size: 12px;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+
+

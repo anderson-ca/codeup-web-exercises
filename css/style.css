@@ -1,3 +1,9 @@
+/*****************************************************
+
+        STYLING PAGE FOR WELCOME HTML PAGE
+
+*******************************************************/
+
 body {
     margin: 0px;
     padding: 0px;
@@ -7,6 +13,12 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+/*****************************************************
+
+    HEADER STYLING
+
+*******************************************************/
 
 .header {
     font-family: AppleMyungjo;
@@ -24,8 +36,6 @@ body {
     text-decoration: underline;
     font-size: 50px;
 }
-
-
 
 .text {
     padding: 50px 150px 50px 150px;
@@ -54,6 +64,12 @@ h2 {
     text-decoration: underline;
 }
 
+/*****************************************************
+
+                    IMAGE STYLING
+
+*******************************************************/
+
 .images {
     text-align: center;
     background-color: #fff;
@@ -62,19 +78,25 @@ h2 {
     opacity: 0.9;
 }
 
+.img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50px 0 50px 0;
+    border: 5px solid #000;
+    margin: 0 20px 10px 20px;
+}
+
 #co_vision {
     color: #000;
     font-size: 50px;
     font-family: AppleMyungjo;
 }
 
-.img {
-    height:200px;
-    width: 200px;
-    border-radius: 50px 0 50px 0;
-    border: 5px solid #000;
-    margin: 0 20px 10px 20px;
-}
+/*****************************************************
+
+                    TABLE STYLING
+
+*******************************************************/
 
 .our_product {
     color: #000;
@@ -99,7 +121,7 @@ table, tr, th, td {
     font-weight: bolder;
 }
 
-tr:hover{
+tr:hover {
     text-decoration: underline;
     background-color: #fff;
 }
@@ -107,6 +129,12 @@ tr:hover{
 th {
     border-radius: 0;
 }
+
+/*****************************************************
+
+                    FOOTER STYLING
+
+*******************************************************/
 
 footer {
     background-color: #fff;

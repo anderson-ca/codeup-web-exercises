@@ -1,3 +1,8 @@
+/*****************************************************
+
+    STYLING PAGE FOR THE CSS BOX MODEL EXERCISE.
+
+*******************************************************/
 body {
     margin: 0;
     padding: 0;
@@ -10,12 +15,17 @@ h1 {
     margin-bottom: 25px;
 }
 
+/*****************************************************
+
+                GENERAL BOX STYLING.
+
+*******************************************************/
 .box {
     height: 50px;
     width: 50px;
     padding: 10px;
     border: 1px solid black;
-    margin:25px;
+    margin: 25px;
     font-weight: bold;
     color: #fff;
     float: left;
@@ -27,6 +37,11 @@ h1 {
     clear: left;
 }
 
+/*****************************************************
+
+            COLORS FOR INDIVIDUAL BOXES
+
+*******************************************************/
 #box1 {
     background-color: #FF0000;
 }
@@ -51,6 +66,12 @@ h1 {
 #box6 {
     background-color: #FFC0CB;
 }
+
+/*****************************************************
+
+                    BOX POSITIONING
+
+*******************************************************/
 
 .arrow {
     position: relative;
