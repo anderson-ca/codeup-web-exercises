@@ -13,7 +13,7 @@
     console.log(planetsArray);
 
     // TODO: Create a string with <br> tags between each planet. console.log() your results.
-    planetsArray.join("<br>");
+    planetsArray = planetsArray.join("<br>");
     //       Why might this be useful?
     console.log(planetsArray);
     // Bonus: Create a second string that would display your planets in an undordered list.

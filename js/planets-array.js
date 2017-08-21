@@ -1,11 +1,11 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////// EXERCISE DEMONSTRATING ARRAY MANIPULATION ////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-(function(){
+(function () {
     "use strict";
 
     // TODO: Create an array holding the names of the eight planets in our solar system.
-    var planets = ["Terra","Mars","Pluto","Jupiter","Uranus", "Mercury","Venus","Saturn"];
+    var planets = ["Terra", "Mars", "Pluto", "Jupiter", "Uranus", "Mercury", "Venus", "Saturn"];
 
     // function for logging the planets array
     function logPlanets() {
@@ -67,4 +67,30 @@
     // TODO: Read the console.log() statement above. Write code to perform the step it describes.
     planets.sort();
     logPlanets();
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////// EXERCISE DEMONSTRATING ARRAY MANIPULATION /////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    var test = [[1, 2], [3, 6], [4, 5], [9, 1]];
+
+
+    function fundIndexWhereSumIs9(array) {
+        for (var x = 0; x < test.length; x++) {
+            var result = test[x][0] + test[x][1];
+
+            if (result === 9) {
+                console.log(x);
+            } else {
+                console.log(-1);
+            }
+        }
+    }
+
+
+    var finalTest = fundIndexWhereSumIs9(test);
+
+    console.log(finalTest);
+
+
 })();
