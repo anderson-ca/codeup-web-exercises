@@ -1,14 +1,14 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////// EXERCISE DEMONSTRATING OBJECTS //////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-(function(){
+(function () {
     "use strict";
 
     /**
      * TODO:
      * Create person object, store it in a variable named person
      */
-    ////////////////////////////////////////
+        ////////////////////////////////////////
     var person = {};
 
     /**
@@ -30,7 +30,7 @@
      * person.sayHello() // returns "Hello from Rick Sanchez!"
      */
     ////////////////////////////////////////
-    person.sayHello = function() {
+    person.sayHello = function () {
         console.log("Hello from " + person.firstName + " " + person.lastName);
     };
     ////////////////////////////////////////
@@ -50,13 +50,23 @@
      * represents one shopper. Use a foreach loop to iterate through the array,
      * and console.log the relevant messages for each person
      */
-
+    /********************************************************************/
+    /********************************************************************/
+    /********************************************************************/
     var shoppers = [
         {name: 'Cameron', amount: 180},
         {name: 'Ryan', amount: 250},
         {name: 'George', amount: 320}
     ];
-
-
+    /********************************************************************/
+    /********************************************************************/
+    /********************************************************************/
+    shoppers.forEach(function (shopper) {
+        if (shoppers.amount > 200) {
+            console.log("Mr. " + shoppers.name + ", you spent " + shoppers.amount + ", your total amount after discount is " + shoppers.amount * .10);
+        } else {
+            console.log("Mr. " + shoppers.name + ", your total is " + shoppers.amount);
+        }
+    });
 
 })();
