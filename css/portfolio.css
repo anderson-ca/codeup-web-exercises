@@ -1,0 +1,117 @@
+/*************************************************
+
+    GENERAL BODY AND HTML STYLING.
+
+**************************************************/
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/********************************************************
+
+    GENERAL CONTAINER COLUMNS AND ROWS DIMENSIONS.
+
+*********************************************************/
+
+.container-fluid {
+    background-color: rgba(3, 4, 4, 0.15);
+}
+
+.row {
+
+}
+
+.col {
+
+}
+
+/********************************************************
+
+    1ST BLOCK STYLING.
+
+*********************************************************/
+
+.first-block-text {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #fff;
+    font-weight: lighter;
+}
+
+
+
+.navbar {
+    margin: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.navbar-default .navbar-brand {
+    color: #000;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #000;
+    font-family: inherit;
+    font-weight: lighter;
+    font-size: 25px;
+    padding: 20px;
+}
+
+#first-row {
+    height: 600px;
+    background-image: url("../img/header-pic1.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    bottom: 60px;
+    z-index: -1;
+
+}
+
+
+.header-text h1 {
+    margin-top: 250px;
+    font-size: 80px;
+}
+
+h2 {
+    font-size: 25px;
+    padding-right: 10px;
+
+}
+
+.stick {
+    color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
