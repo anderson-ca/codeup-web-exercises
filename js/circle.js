@@ -9,7 +9,7 @@
 
             var pi = Math.PI;
 
-            var area = pi * Math.sqrt(this.radius);
+            var area = pi * Math.pow(this.radius, 2);
 
             return area;
         },
