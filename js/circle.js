@@ -14,7 +14,6 @@
             return area;
         },
 
-
         logInfo: function (doRounding) {
             // TODO: complete this method.
 
@@ -32,7 +31,6 @@
     };
 
     var areaOut = circle.getArea();
-
 
     // log info about the circle
     console.log("Raw circle information");
