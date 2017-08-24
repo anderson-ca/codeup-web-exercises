@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +8,7 @@
 
 <h1 id="main-header">Hello World!</h1>
 <ul>
-    <li id="first" data-dbid="1">Item 1</li>
+    <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
     <li data-dbid="3">Item 3</li>
     <li data-dbid="4">Item 4</li>
@@ -27,10 +26,10 @@
 </p>
 
 <script>
-    (function() {
+    (function () {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
-         var mainHeader = document.getElementById("main-header");
+        var mainHeader = document.getElementById("main-header");
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
         mainHeader.innerHTML = "JavaScript is Cool";
@@ -46,18 +45,21 @@
 
         // TODO: Set text color on every other list item to grey
         // TODO: Set text color of li with dbid = 1 to blue
-        for (var i = 0; i < listItems.length; i++) {
-            if (i % 2 !== 0) {
-                listItems[i].style.color = "#808080";
-            }
+        for (var i = 0; i < listItems.length; i += 2) {
+            listItems[i].style.color = "#B4B4B4";
+
         }
 
-        var first = document.getElementById("first");
-
-        first.style.color = "#207499";
-
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        var subParagraphs = document.getElementsByClassName("sub-paragraph");
+//        var subParagraphs = document.getElementsByClassName("sub-paragraph");
+        for (var i = 0; i < listItems.length; i++) {
+            var id = listItems[i].getAttribute("data-dbid");
+
+            if (id === "1") {
+                listItems[i].style.color = "#207499";
+            }
+
+        }
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
         subParagraphs[0].innerHTML = "Mission Accomplished!"
