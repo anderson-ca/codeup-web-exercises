@@ -1,16 +1,34 @@
-/*****************************************************
+/*************************************************
 
-    BASIC STYLING FOR THE PRACTICE PAGE ( BORDERS )
+    GENERAL BODY AND HTML STYLING.
 
-*******************************************************/
+**************************************************/
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/********************************************************
+
+    GENERAL CONTAINER COLUMNS AND ROWS DIMENSIONS.
+
+*********************************************************/
+
+.container-fluid {
+    background-color: rgba(3, 4, 4, 0.15);
+}
+
 .row {
-    border: 1px solid #000;
-    margin-bottom: 10px;
+    border: solid 1px #000;
 }
 
 .col {
-    border: 2px solid #000;
-    background-color: #C1C1C1;
-    padding: 5px;
-    font-weight: bold;
+    border: solid 1px #000;
 }
+

@@ -13,7 +13,7 @@
 <!---------------------------------------------------------------------------------------------------------->
 <!------------------------------------------------ NAVIGATION ---------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------->
-<nav class="navbar navbar-default ">
+<nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <!-- SANDWICH BUTTON  ----------------------------------->
         <div class="navbar-header">
@@ -24,14 +24,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">ANDERSON CARDOSO</a>
+            <a class="navbar-brand" href="#">< A / C ></a>
         </div> <!-- SANDWICH BUTTON / -->
 
         <!-- NAVIGATION AREA -------------------------------------->
         <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="#">Home |</a></li>
-                <li><a href="#">Work |</a></li>
+                <li><a href="#">Home <span class="stick">|</span></a></li>
+                <li><a href="#">Work <span class="stick">|</span></a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </div> <!-- NAVIGATION AREA / -->
@@ -43,22 +43,38 @@
 <div class="row" id="first-row">
     <div class="col">
         <div class="text-center header-text first-block-text">
-            <h1 class="first-block-text">Web Developer</h1>
+            <h1 class="first-block-text" id="test">Web Developer</h1>
             <h2 class="first-block-text">design <span class="stick"> | </span> develop <span class="stick"> | </span>
                 grow</h2>
         </div>
     </div>
 </div> <!-- HEADER AND SUB-HEADER / -->
-
+<!---------------------------------------------------------------------------------------------------------->
+<!------------------------------------------ ABOUT ( 2ND ROW ) --------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------->
 <div class="container" id="second-row">
     <div class="row">
-        <div class="col">
-            <h2>About</h2>
+        <div class="col about-col">
+            <h2 class="text-center about-header second-block-text">About</h2>
+            <hr>
         </div>
+        <div class="col about-col">
+            <p class="about-text second-block-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi
+                aspernatur at, aut deserunt doloremque id, iste iusto libero mollitia necessitatibus pariatur
+                praesentium quam reiciendis rerum totam vitae. Aliquam, exercitationem!</p>
+            <p class="about-text second-block-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
+                assumenda atque aut consequuntur distinctio dolor, eum hic incidunt iste iure modi quia quibusdam quo
+                repellat sequi soluta tempore, tenetur totam?</p>
+        </div> <!-- ABOUT COLUMN / -->
+    </div> <!-- ABOUT / -->
+</div> <!-- CONTAINER / -->
+<!---------------------------------------------------------------------------------------------------------->
+<!------------------------------------------ TOOLS ( 3RD ROW ) --------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------->
+<div class="container" id="third-row">
+    <div class="row" id="third-row">
     </div>
 </div>
-
-
 <script>
     src = "http://code.jquery.com/jquery-3.2.1.min.js"
     integrity = "sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
