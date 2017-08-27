@@ -4,14 +4,20 @@
 ////// ITERATION THROUGH ARRAYS CHALLENGE ///////
 /////////////////////////////////////////////////
 
-    // TODO: Create an array of 4 people's names using literal array notation, in a variable called 'names'.
+    ////////////////////////////// CREATED ARRAY WITH FOUR NAMES.
     var names = ["Rick", "Morty", "Beth", "Jerry"];
-    // TODO: Create a log statement that will log the number of elements in the names array.
+
+    // CONSOLE LOGGING THE LENGTH OR NUMBER OF ELEMENTS IN MY ARRAY.
     console.log(names.length);
-    // TODO: Create log statements that will print each of the names array elements individually.
+
+    // CREATE FUNCTION LOGGING EACH ELEMENT IN MY ARRAY.
     names.forEach(function (e, i, a) {
-        console.log(e);
-        console.log(i);
-        console.log(a);
+
+        console.log(e); // REPRESENTS ELEMENT.
+
+        console.log(i); // REPRESENTS THE INDEX NUMBER OF AN ELEMENT.
+
+        console.log(a); // REPRESENTS THE ARRAY ITSELF.
+
     })
 })();

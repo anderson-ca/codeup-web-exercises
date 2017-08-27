@@ -3,18 +3,22 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 "use strict";
-// Don't modify the following line, it generates a random number     between 1 and
-// 100 and stores it in a variable named random
+
+///////////////////////// GENERATE RANDOM NUMBER FROM 1 TO 100.
 var random = Math.floor((Math.random() * 100) + 1);
 
 (function () {
+
     ///////////////////// SAY HELLO FUNCTION.
     function sayHello(name) {
+
         return "Hello, " + name;
+
     }
 
     ////////////////////// CALLING FUNCTION AND ASSIGNING TO A VARIABLE.
     var myName = "Anderson";
+
     var helloMessage = sayHello(myName);
 
     console.log(helloMessage);
@@ -23,7 +27,9 @@ var random = Math.floor((Math.random() * 100) + 1);
     var random = Math.floor((Math.random() * 100) + 1);
 
     function isOdd(number) {
+
         var log = (number % 2 !== 0) ? "The number " + number + " is odd" : "The number " + number + " is not odd";
+
         return log;
     }
 
@@ -33,6 +39,7 @@ var random = Math.floor((Math.random() * 100) + 1);
 
     //////////////////////// TIP CALCULATING FUNCTION.
     function calculateTip(tip, bill) {
+
         var total = (bill * tip) / 100;
 
         return total;
@@ -40,6 +47,7 @@ var random = Math.floor((Math.random() * 100) + 1);
 
     /////////////////////// ASK FOR CHECK FUNCTION.
     function askForCheck() {
+
         var billTotal = prompt("Enter bill total");
 
         var tipTotal = prompt("Enter the percentage you wish to tip");

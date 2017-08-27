@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <title>DOM: Query and Modify</title>
 </head>
+<!---------------------------------------------------------------------------------------------------------->
+<!-------------------------------------- DOM QUERY AND MODIFY EXERCISE ------------------------------------->
+<!---------------------------------------------------------------------------------------------------------->
 <body>
 
-<h1 id="main-header">Hello World!</h1>
+<h1 id="main-header">Hello World!</h1> <!-------- PAGE HEADER ------->
+
+<!------------------------------------------- VARIOUS BUTTONS ------->
+<button id="btn1">Click me</button>
+<button id="btn2">Click me as well!</button>
+<button id="btn3">Hey, me too!</button>
+<button id="btn4">DO IT!</button>
+
+<!-------------------------------------------- LIST OF ITEMS -------->
 <ul>
     <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
@@ -14,7 +25,12 @@
     <li data-dbid="4">Item 4</li>
     <li data-dbid="5">Item 5</li>
 </ul>
+
 <h2 id="sub-header">Hello Again.</h2>
+
+<img id="rick" src="img/picklerick.jpg" alt=""> <!-- SUB-HEADER ----->
+
+<!------------------------------------------- LOREM PARAGRAPH ------->
 <p class="sub-paragraph">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -25,45 +41,107 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<!--------------------------------------------- JS SCRIPT AREA ------->
 <script>
     (function () {
         "use strict";
-        // TODO: Uncomment next line and get the main header element by id
+        ////////////////////////////// QUERYING THE MAIN-HEADER TO A VARIABLE CALLED mainHeader ( BY ID NAME ).
         var mainHeader = document.getElementById("main-header");
 
-        // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+        ////////////////////////////// CHANGING THE INTERNAL TEXT OF THE MAIN-HEADER.
         mainHeader.innerHTML = "JavaScript is Cool";
 
-        // TODO: Uncomment the next line and get the sub header element by id
+        ///////////////////////////// QUERYING THE SUB-HEADER TO A VARIABLE CALLED subHeader ( BY ID NAME )..
         var subHeader = document.getElementById("sub-header");
 
-        // TODO: Set the text color of subHeader to blue
+        ///////////////////////////// USING THE COLOR METHOD IN STYLE OBJECT TO CHANGE THE COLOR OF THE SUB-HEADER TEXT.
         subHeader.style.color = "#207499";
 
-        // TODO: Uncomment the next line and get all list items
+        ///////////////////////////// QUERYING ALL LI ELEMENTS ( BY ELEMENT NAME ).
         var listItems = document.getElementsByTagName("li");
 
-        // TODO: Set text color on every other list item to grey
-        // TODO: Set text color of li with dbid = 1 to blue
+        // USING A FOR LOOP TO CHANGE THE COLOR OF ALL THE LI ELEMENTS.
         for (var i = 0; i < listItems.length; i += 2) {
+
             listItems[i].style.color = "#B4B4B4";
 
         }
 
-        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-//        var subParagraphs = document.getElementsByClassName("sub-paragraph");
+        ///////////////////////////// USING A SECOND FOR LOOP TO CHANGE AN ITEM WITH MORE SPECIFICITY.
         for (var i = 0; i < listItems.length; i++) {
+
             var id = listItems[i].getAttribute("data-dbid");
 
             if (id === "1") {
+
                 listItems[i].style.color = "#207499";
             }
 
         }
 
-        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerHTML = "Mission Accomplished!"
+        ////////////////////////////// QUERYING ALL SUB-PARAGRAPH ELEMENTS ( BY CLASS NAME ).
+        var subParagraphs = document.getElementsByClassName("sub-paragraph");
+
+        ////////////////////////////// CHANGING THE INNER HTML INSIDE THE subParagraph variable.
+        subParagraphs[0].innerHTML = "Mission Accomplished!";
+
+        //////////////////////////////////////////////////////////////////////////
+        /////////////////////// EVENT LISTENER EXERCISE. /////////////////////////
+        /////////////////////////////////////////////////////////////////////////
+
+
+        ////////////////////////////// CREATED BUTTON VARIABLE TO QUERY THE BUTTON ELEMENTS INT HE HTML PAGE.
+        var btn1 = document.getElementById("btn1");
+        var btn2 = document.getElementById("btn2");
+        var btn3 = document.getElementById("btn3");
+        var btn4 = document.getElementById("btn4");
+        var rick = document.getElementById("rick");
+
+        rick.style.display = "none";
+
+
+        ////////////////////////////// EVENT LISTENERS CREATED TO ADD FUNCTIONALITY TO HTML BUTTONS.
+        btn1.addEventListener("click", function () {
+
+            mainHeader.innerHTML = "JavaScript is Amazing!";
+
+        });
+
+        btn2.addEventListener("click", function () {
+
+            for (var i = 0; i < listItems.length; i++) {
+
+                listItems[i].style.color = "#000";
+
+            }
+
+        });
+
+        btn3.addEventListener("click", function () {
+
+            subHeader.style.color = "#05800B";
+
+        });
+
+        btn4.addEventListener("click", function () {
+
+            if (rick.style.display === "block") {
+
+                rick.style.display = "none";
+
+                subHeader.innerHTML = "Hello Again";
+
+            } else {
+
+                subHeader.innerHTML = "PICKLE RICK!!!";
+
+                rick.style.display = "block";
+            }
+
+        });
+
+
     })();
-</script>
+</script> <!--------------------- JS SCRIPT AREA / ------->
 </body>
 </html>
