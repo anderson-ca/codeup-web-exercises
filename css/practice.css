@@ -26,6 +26,7 @@ body {
 
 .row {
     border: solid 1px #000;
+    height: 200px;
 }
 
 .col {
