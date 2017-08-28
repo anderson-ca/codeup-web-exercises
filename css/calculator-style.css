@@ -24,25 +24,43 @@ body {
 
 *****************************************/
 
-.display-wrapper {
+#display-wrapper {
+    border: 1px solid #000;
+    margin:30px;
     text-align: center;
+    height: 30px;
 
 }
 
-#numerator {
-    position: relative;
-}
-
-#operator {
-    position: relative;
-    width: 30px;
-}
-
-#denominator {
-    position: relative;
-}
 /****************************************
 
         INPUT DIMENSIONS AND STYLE
 
 *****************************************/
+
+.input-wrapper {
+    margin:30px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
