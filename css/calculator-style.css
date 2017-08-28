@@ -1,0 +1,48 @@
+html {
+
+}
+
+body {
+
+}
+
+/***********************************
+
+        CONTAINER DIMENSIONS
+
+************************************/
+
+.container {
+    height: 400px;
+    width: 400px;
+    border: 1px solid #000;
+}
+
+/****************************************
+
+       DISPLAY DIMENSIONS AND STYLE
+
+*****************************************/
+
+.display-wrapper {
+    text-align: center;
+
+}
+
+#numerator {
+    position: relative;
+}
+
+#operator {
+    position: relative;
+    width: 30px;
+}
+
+#denominator {
+    position: relative;
+}
+/****************************************
+
+        INPUT DIMENSIONS AND STYLE
+
+*****************************************/
