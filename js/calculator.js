@@ -41,6 +41,7 @@ function equalTo() {
     numb = eval(numb + container2.value + container3.value);
     container.value = numb;
     container3.value = '';
+    container2.value = '';
 }
 
 
