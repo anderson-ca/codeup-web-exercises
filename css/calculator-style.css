@@ -1,4 +1,77 @@
+body {
+    background-image: url("../img/kyle-gregory-devaras-241280.jpg");
+    background-size: 100%;
+}
 
+#calc {
+    margin-top: 100px;
+    border: 1px solid #000;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    position: relative;
+    right: -560px;
+    bottom: -100px;
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    opacity: .5;
+}
+
+#display-area {
+    margin: 10px 5px;
+}
+
+#display {
+    font-size: 20px;
+    color: #fff;
+    width: 125px;
+    text-align: right;
+    height: 50px;
+    background-color: #545454;
+    border: none;
+
+}
+
+#display2 {
+    font-size: 20px;
+    color: #fff;
+    width: 30px;
+    text-align: center;
+    height: 30px;
+    background-color: #545454;
+    border: none;
+
+}
+
+#display3 {
+    font-size: 20px;
+    color: #fff;
+    width: 125px;
+    text-align: right;
+    height: 50px;
+    background-color: #545454;
+    border: none;
+
+}
+
+#form {
+    text-align: center;
+}
+
+.keys {
+    margin: 5px;
+
+}
+
+#equal {
+    width: 110px;
+}
+
+.x {
+    position: relative;
+    right: -56px;
+    bacckground-color: #808080;
+}
 
 
 

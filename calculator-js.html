@@ -1,39 +1,51 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel='stylesheet' href='css/calculator-style.css'>
     <meta charset='UTF-8'>
     <title>Title</title>
 </head>
+<!---------------------------------------------------------------------------------------------------------->
+<!----------------------------------------- JS CALCULATOR EXERCISE ----------------------------------------->
+<!---------------------------------------------------------------------------------------------------------->
 <body>
-<h1>JS Calculator</h1>
-<div id='calculator'>
-    <form>
-        <input type="text" id='display' disabled>
+<div id='calc'>
+    <form id="form">
+        <div id="display-area">
+            <!---------------------------------------------------------------------------------------------------------->
+            <!-------------------------------------------- DISPLAY AREA ------------------------------------------------>
+            <!---------------------------------------------------------------------------------------------------------->
+            <input type="text" id='display' class="display-screen" disabled>
+            <input type="text" id='display2' class="display-screen" disabled>
+            <input type="text" id='display3' class="display-screen" disabled>
+        </div>
+        <!---------------------------------------------------------------------------------------------------------->
+        <!------------------------------------------------- INPUT AREA --------------------------------------------->
+        <!---------------------------------------------------------------------------------------------------------->
         <br>
-        <input type='button' value='c' id='keys' onclick='toScreen("c")'>
-        <input type='button' value='%' id='keys' onclick='toPercent()'>
-        <input type='button' value='+/-' id='keys' onclick='posNeg()'>
-        <input type='button' value='/' id='keys' onclick='toScreen("/")'>
+        <div class='keys btn btn-lg btn-default x' onclick='toScreen("c")'>c</div>
+        <div class='keys btn btn-lg btn-default x' onclick='toScreen("/")'>/</div>
         <br>
-        <input type='button' value='7' id='keys' onclick='toScreen("7")'>
-        <input type='button' value='8' id='keys' onclick='toScreen("8")'>
-        <input type='button' value='9' id='keys' onclick='toScreen("9")'>
-        <input type='button' value='*' id='keys' onclick='toScreen("*")'>
+        <div class='keys btn btn-lg btn-default' onclick='toScreen("7")'>7</div>
+        <div class='keys btn btn-lg btn-default' onclick='toScreen("8")'>8</div>
+        <div class='keys btn btn-lg btn-default' onclick='toScreen("9")'>9</div>
+        <div class='keys btn btn-lg btn-default' onclick='toScreen("*")'>*</div>
         <br>
-        <input type='button' value='4' id='keys' onclick='toScreen("4")'>
-        <input type='button' value='5' id='keys' onclick='toScreen("5")'>
-        <input type='button' value='6' id='keys' onclick='toScreen("6")'>
-        <input type='button' value='-' id='keys' onclick='toScreen("-")'>
+        <div class='keys btn btn-lg btn-default' onclick='toScreen("4")'>4</div>
+        <div class='keys btn btn-lg btn-default' onclick='toScreen("5")'>5</div>
+        <div class='keys btn btn-lg btn-default' onclick='toScreen("6")'>6</div>
+        <div class='keys btn btn-lg btn-default' onclick='toScreen("-")'>-</div>
         <br>
-        <input type='button' value='1' id='keys' onclick='toScreen("1")'>
-        <input type='button' value='2' id='keys' onclick='toScreen("2")'>
-        <input type='button' value='3' id='keys' onclick='toScreen("3")'>
-        <input type='button' value='+' id='keys' onclick='toScreen("+")'>
+        <div class='keys btn btn-lg btn-default' onclick='toScreen("1")'>1</div>
+        <div class='keys btn btn-lg btn-default' onclick='toScreen("2")'>2</div>
+        <div class='keys btn btn-lg btn-default' onclick='toScreen("3")'>3</div>
+        <div class='keys btn btn-lg btn-default' onclick='toScreen("+")'>+</div>
         <br>
-        <input type='button' value='0' id='keys' onclick='toScreen("0")'>
-        <input type='button' value='.' id='keys' onclick='toScreen(".")'>
-        <input type='button' value='=' id='equal' onclick='equalTo()'>
+        <div class='keys btn btn-lg btn-default' onclick='toScreen("0")'>0</div>
+        <div class='keys btn btn-lg btn-default' onclick='toScreen(".")'>.</div>
+        <div class='keys btn btn-lg btn-default' id='equal' onclick='equalTo()'>=</div>
     </form>
 </div>
 
