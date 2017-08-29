@@ -1,43 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <link rel="stylesheet" href="css/calculator-style.css">
-    <meta charset="UTF-8">
+    <link rel='stylesheet' href='css/calculator-style.css'>
+    <meta charset='UTF-8'>
     <title>Title</title>
 </head>
 <body>
-
-<div class="container">
-    <form method="POST" action="">
-        <div id="display-wrapper">
-           <div class="box" id="denominator"></div>
-            <div class="box" id="operator"></div>
-            <div class="box" id="numerator"></div>
-        </div>
-        <div class="input-wrapper">
-            <input type="button" class="button" id="1" value="1">
-            <input type="button" class="button" id="2" value="2">
-            <input type="button" class="button" id="3" value="3">
-            <input type="button" class="button" id="+" value="+">
-            <br>
-            <input type="button" class="button" id="4" value="4">
-            <input type="button" class="button" id="5" value="5">
-            <input type="button" class="button" id="6" value="6">
-            <input type="button" class="button" id="-" value="-">
-            <br>
-            <input type="button" class="button" id="7" value="7">
-            <input type="button" class="button" id="8" value="8">
-            <input type="button" class="button" id="9" value="9">
-            <input type="button" class="button" id="*" value="*">
-            <br>
-            <input type="button" class="button" id="c" value="c">
-            <input type="button" class="button" id="0" value="0">
-            <input type="button" class="button" id="=" value="=">
-            <input type="button" class="button" id="/" value="/">
-        </div>
-
+<h1>JS Calculator</h1>
+<div id='calculator'>
+    <form>
+        <input type="text" id='display' disabled>
+        <br>
+        <input type='button' value='c' id='keys' onclick='toScreen("c")'>
+        <input type='button' value='%' id='keys' onclick='toPercent()'>
+        <input type='button' value='+/-' id='keys' onclick='posNeg()'>
+        <input type='button' value='/' id='keys' onclick='toScreen("/")'>
+        <br>
+        <input type='button' value='7' id='keys' onclick='toScreen("7")'>
+        <input type='button' value='8' id='keys' onclick='toScreen("8")'>
+        <input type='button' value='9' id='keys' onclick='toScreen("9")'>
+        <input type='button' value='*' id='keys' onclick='toScreen("*")'>
+        <br>
+        <input type='button' value='4' id='keys' onclick='toScreen("4")'>
+        <input type='button' value='5' id='keys' onclick='toScreen("5")'>
+        <input type='button' value='6' id='keys' onclick='toScreen("6")'>
+        <input type='button' value='-' id='keys' onclick='toScreen("-")'>
+        <br>
+        <input type='button' value='1' id='keys' onclick='toScreen("1")'>
+        <input type='button' value='2' id='keys' onclick='toScreen("2")'>
+        <input type='button' value='3' id='keys' onclick='toScreen("3")'>
+        <input type='button' value='+' id='keys' onclick='toScreen("+")'>
+        <br>
+        <input type='button' value='0' id='keys' onclick='toScreen("0")'>
+        <input type='button' value='.' id='keys' onclick='toScreen(".")'>
+        <input type='button' value='=' id='equal' onclick='equalTo()'>
+    </form>
 </div>
-
 
 <script src="js/calculator.js"></script>
 </body>
