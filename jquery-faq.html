@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>FAQ</title>
+    <style>
+        .invisible {
+
+            display: none;
+
+        }
+
+        dd {
+            color: #2846ff;
+        }
+
+
+    </style>
+</head>
+<body>
+<h1>Frequently Asked Questions</h1>
+
+<button id="visible">Show Answers</button>
+
+<dl>
+    <dt>What's going on?</dt>
+    <dd class="invisible">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consectetur deserunt dolor illo, illum iste
+        laudantium maxime non officia optio perferendis quam quas quia recusandae sed totam vero voluptas, voluptatum.
+    </dd>
+    <dt>What is your favorite pizza place?</dt>
+    <dd class="invisible">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi, assumenda at ipsam iusto odio officia
+        reprehenderit soluta. A ad dolor explicabo laudantium non optio reiciendis repudiandae ut vero. Soluta.
+    </dd>
+    <dt>Are we there yet?</dt>
+    <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid, aut dolore eos ex harum
+        ipsa iusto minima modi molestiae, natus nihil odio, officiis pariatur porro quos tempora? Expedita, fuga.
+    </dd>
+    <dt>Who am I?</dt>
+    <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus at dolorem doloremque esse
+        harum maxime molestias mollitia natus, nihil nisi omnis ratione repudiandae, sapiente soluta sunt ullam veniam!
+        Nemo, nisi.
+    </dd>
+    <dt>Where should I go?</dt>
+    <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum inventore iste odio odit
+        tempora! Alias delectus dolor iusto minima minus molestias, neque officia provident quam quo, saepe vel
+        voluptates, voluptatum.
+    </dd>
+    <dt>What time is it?</dt>
+    <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem et illo molestiae optio,
+        quae saepe tempore vitae voluptates. Aliquid aperiam consequatur cupiditate ducimus facere molestiae non numquam
+        similique, totam vel.
+    </dd>
+    <dt>Do you like Ice cream?</dt>
+    <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam at esse explicabo porro
+        reprehenderit velit voluptas voluptate voluptatem. At blanditiis exercitationem minus officia. Aut dignissimos
+        ipsum laborum odio odit optio.
+    </dd>
+    <dt>Is it safe here?</dt>
+    <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid facere sed? A
+        beatae esse necessitatibus placeat ullam! Adipisci at consequuntur cumque dolorem dolores id nisi nobis, odio
+        quia voluptatem.
+    </dd>
+    <dt>Where to go from here?</dt>
+    <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio excepturi, voluptates.
+        Autem consequuntur cum dolorum ea esse est fuga ipsum libero minus provident quia rem similique, tempore ut
+        velit voluptas?
+    </dd>
+    <dt>What to do now?</dt>
+    <dd class="invisible">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ea error illum iure magni sed suscipit
+        temporibus, voluptates voluptatum? Culpa dicta dignissimos doloribus inventore numquam placeat possimus quia sed
+        tempora?
+    </dd>
+</dl>
+
+<script src="js/jquery-2.2.4.min.js"></script>
+<script>
+    "use strict";
+
+    (function () {
+
+        $("#visible").click(function () {
+            console.log(event.target);
+            event.preventDefault();
+            $("dd").toggleClass("invisible");
+        });
+
+        $("dt").click(function () {
+//            $("dt").css("background-color", "#fff");
+            $(this).css("background-color", "#fcff6a")
+        });
+
+        $("dt").dblclick(function () {
+            $(this).css("background-color", "#fff")
+        });
+
+    })();
+</script>
+
+</body>
+</html>

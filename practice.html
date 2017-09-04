@@ -3,93 +3,136 @@
 <head>
     <style></style>
     <title>Title</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/practice.css">
 </head>
 <body>
 
 
-<script src="js/jquery-2.2.4.min.js"></script>
 <script>
+    "use strict";
     // Hex Clock.
 
-    (function () {
+//    (function () {
 
-//        // CREATE HELPER FUNCTION TO HAVE ACCESS TO DATE, HOURS, MINUTES, AND SECONDS.
-//        function time() {
-//            var date = new Date();
-//
-//            var hours = date.getHours();
-//
-//            var minutes = date.getMinutes();
-//
-//            var seconds = date.getSeconds();
-//
-//
-//            var list = [hours, minutes, seconds].map(function (num) {
-//
-//                return num < 10 ? "0" + num : String(num);
-//
-//
-//            });
-//
-//            hours = list[0];
-//
-//            minutes = list[1];
-//
-//            seconds = list[2];
-//
-//            return hours + minutes + seconds;
-//
-//        }
-//
-//        var test = time();
-//
-//        console.log(test);
+        // CREATE HELPER FUNCTION TO HAVE ACCESS TO DATE, HOURS, MINUTES, AND SECONDS.
+        function time() {
+            var date = new Date();
+
+            var hours = date.getHours();
+
+            var minutes = date.getMinutes();
+
+            var seconds = date.getSeconds();
 
 
-        let x = 0;
+            var list = [hours, minutes, seconds].map(function (num) {
 
-        "use strict";
+                return num < 10 ? "0" + num : String(num);
 
+            });
 
-        function fullScreen(element) {
+            hours = list[0];
 
-            var newElement = document.createElement(element);
+            minutes = list[1];
 
-            newElement.style.height = "100vh";
+            seconds = list[2];
 
-            document.body.appendChild(newElement);
-
-            return newElement;
+            return hours + minutes + seconds;
 
         }
 
-        function input(inputType, DOMElement, callback) {
+        function output(time) {
 
-            DOMElement.addEventListener(inputType, function () {
+            var color = "#" + time;
 
-                var x = event.clientX;
+            document.body.bgColor = color;
 
-                var y = event.clientY;
+            document.body.textContent = color;
 
-                callback(DOMElement, x, y);
+            document.body.style.color = "#fff";
+
+            document.body.style.fontSize = "100PX";
+
+            document.body.style.textAlign = "center";
+
+            document.body.style.height = "100vh";
+
+        }
+
+        function startClock(callback, name) {
+
+            document.body.addEventListener("dblclick", function(){
+
+                callback(name);
 
             });
 
         }
 
-        function output(element, x, y) {
+        function stopClock(callback, name) {
 
-            element.textContent = x + ", " + y;
+            document.body.addEventListener("click", function(){
 
-            element.style.backgroundColor = "rgb(" + x + ", " + y + ", 100)";
+                callback(name);
+
+            });
 
         }
 
-        input("mousemove", fullScreen("div"), output);
+        function init() {
 
-    })();
+            var tickTock = setInterval(function (){
+
+                output(time());
+
+            }, 1000);
+
+            stopClock(clearInterval, tickTock);
+
+            startClock(init, tickTock);
+
+        }
+
+        init();
+
+
+        //        function fullScreen(element) {
+        //
+        //            var newElement = document.createElement(element);
+        //
+        //            newElement.style.height = "100vh";
+        //
+        //            document.body.appendChild(newElement);
+        //
+        //            return newElement;
+        //
+        //        }
+        //
+        //        function input(inputType, DOMElement, callback) {
+        //
+        //            DOMElement.addEventListener(inputType, function () {
+        //
+        //                var x = event.clientX;
+        //
+        //                var y = event.clientY;
+        //
+        //                callback(DOMElement, x, y);
+        //
+        //            });
+        //
+        //        }
+        //
+        //        function output(element, x, y) {
+        //
+        //            element.textContent = x + ", " + y;
+        //
+        //            element.style.backgroundColor = "rgb(" + x + ", " + y + ", 100)";
+        //
+        //        }
+        //
+        //        input("mousemove", fullScreen("div"), output);
+
+//    })();
 
 </script>
 </body>
