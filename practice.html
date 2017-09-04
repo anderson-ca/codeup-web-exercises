@@ -1,32 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/practice.css">
-    <link href="https://fonts.googleapis.com/css?family=Dosis|Josefin+Sans|Titillium+Web" rel="stylesheet">
     <style></style>
     <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/practice.css">
 </head>
 <body>
-<div class="row" id="row-one">
 
-</div>
-<div class="row" id="row-two">
 
-</div>
-<div class="row" id="row-three">
-
-</div>
-<div class="row" id="row-four">
-
-</div>
+<script src="js/jquery-2.2.4.min.js"></script>
 <script>
-    src = "http://code.jquery.com/jquery-3.2.1.min.js"
-    integrity = "sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin = "anonymous"
+    // Hex Clock.
+
+    (function () {
+
+//        // CREATE HELPER FUNCTION TO HAVE ACCESS TO DATE, HOURS, MINUTES, AND SECONDS.
+//        function time() {
+//            var date = new Date();
+//
+//            var hours = date.getHours();
+//
+//            var minutes = date.getMinutes();
+//
+//            var seconds = date.getSeconds();
+//
+//
+//            var list = [hours, minutes, seconds].map(function (num) {
+//
+//                return num < 10 ? "0" + num : String(num);
+//
+//
+//            });
+//
+//            hours = list[0];
+//
+//            minutes = list[1];
+//
+//            seconds = list[2];
+//
+//            return hours + minutes + seconds;
+//
+//        }
+//
+//        var test = time();
+//
+//        console.log(test);
+
+
+        let x = 0;
+
+        "use strict";
+
+
+        function fullScreen(element) {
+
+            var newElement = document.createElement(element);
+
+            newElement.style.height = "100vh";
+
+            document.body.appendChild(newElement);
+
+            return newElement;
+
+        }
+
+        function input(inputType, DOMElement, callback) {
+
+            DOMElement.addEventListener(inputType, function () {
+
+                var x = event.clientX;
+
+                var y = event.clientY;
+
+                callback(DOMElement, x, y);
+
+            });
+
+        }
+
+        function output(element, x, y) {
+
+            element.textContent = x + ", " + y;
+
+            element.style.backgroundColor = "rgb(" + x + ", " + y + ", 100)";
+
+        }
+
+        input("mousemove", fullScreen("div"), output);
+
+    })();
+
 </script>
-<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
