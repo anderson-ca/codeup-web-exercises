@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <meta charset="UTF-8">
     <title>FAQ</title>
     <style>
@@ -19,10 +18,16 @@
     </style>
 </head>
 <body>
+<div>
+    <!---------------------------------- NEWS LETTER -->
+    <h1>Would you like to sign up for the news letter?</h1>
+    <span>x</span>
+</div>
 <h1>Frequently Asked Questions</h1>
 
 <button id="visible">Show Answers</button>
 
+<!-------------------------------------- FAQ -->
 <dl>
     <dt>What's going on?</dt>
     <dd class="invisible">
@@ -76,28 +81,79 @@
     </dd>
 </dl>
 
+<!-------------------------------------------- FUN FACTS -->
+<button id="yellow">click for yellow</button>
+
+<ul class="test">
+    <h3>x Park</h3>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias aliquam consequatur dicta do</li>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, dolores excepturi explicabo harum id</li>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem blanditiis culpa dele</li>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantiu</li>
+</ul>
+
+<ul>
+    <h3>y Park</h3>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam aut doloremque ducimu</li>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, consequuntur deserunt dolore</li>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam delectus dolores ea</li>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis earum numquam voluptate. A</li>
+</ul>
+
+<ul>
+    <h3>w Park</h3>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic in libero minima odit reiciend</li>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus amet cupidita</li>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut, ex, explicabo ipsum</li>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet animi, at blanditiis,</li>
+</ul>
+
 <script src="js/jquery-2.2.4.min.js"></script>
 <script>
     "use strict";
+    /////////////////////////// NEWS LETTER.
+    $("span").parents("div").bind("click", function () {
+        $(this).hide(500);
+    });
 
-    (function () {
+    /////////////////////////// FAQ.
+    $("#visible").click(function () {
+        console.log(event.target);
+        event.preventDefault();
+        $("dd").toggleClass("invisible");
+    });
 
-        $("#visible").click(function () {
-            console.log(event.target);
-            event.preventDefault();
-            $("dd").toggleClass("invisible");
-        });
-
-        $("dt").click(function () {
+    ///////
+    $("dt").click(function () {
 //            $("dt").css("background-color", "#fff");
-            $(this).css("background-color", "#fcff6a")
+        $(this).css("background-color", "#fcff6a");
+    });
+
+    //////
+    $("dt").dblclick(function () {
+        $(this).css("background-color", "#fff");
+    });
+
+    /////////////////////////// FUNC FACTS.
+    $("#yellow").bind("click", function () {
+        $("ul").each(function() {
+            $(this).children("li").last().css("background-color", "#fcff6a");
         });
 
-        $("dt").dblclick(function () {
-            $(this).css("background-color", "#fff")
-        });
+    });
 
-    })();
+    //////
+    $("h3").bind("click", function() {
+        $("ul").each(function () {
+            $(this).children("li").first().css("font-weight", "bold");
+        });
+    });
+
+    //////
+    $("li").bind("click", function() {
+        $(this).parents("ul").children("li").first().css("color", "blue");
+    });
+
 </script>
 
 </body>
