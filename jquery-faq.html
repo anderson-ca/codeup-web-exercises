@@ -14,7 +14,6 @@
             color: #2846ff;
         }
 
-
     </style>
 </head>
 <body>
@@ -24,6 +23,7 @@
     <span>x</span>
 </div>
 <h1>Frequently Asked Questions</h1>
+<h2 id="register">Register For The Site</h2>
 
 <button id="visible">Show Answers</button>
 
@@ -84,24 +84,24 @@
 <!-------------------------------------------- FUN FACTS -->
 <button id="yellow">click for yellow</button>
 
-<ul class="test">
-    <h3>x Park</h3>
+<h3>x Park</h3>
+<ul class="facts">
     <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias aliquam consequatur dicta do</li>
     <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, dolores excepturi explicabo harum id</li>
     <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem blanditiis culpa dele</li>
     <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantiu</li>
 </ul>
 
-<ul>
-    <h3>y Park</h3>
+<h3>y Park</h3>
+<ul class="facts">
     <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam aut doloremque ducimu</li>
     <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, consequuntur deserunt dolore</li>
     <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam delectus dolores ea</li>
     <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis earum numquam voluptate. A</li>
 </ul>
 
-<ul>
-    <h3>w Park</h3>
+<h3>w Park</h3>
+<ul class="facts">
     <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic in libero minima odit reiciend</li>
     <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus amet cupidita</li>
     <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut, ex, explicabo ipsum</li>
@@ -112,8 +112,8 @@
 <script>
     "use strict";
     /////////////////////////// NEWS LETTER.
-    $("span").parents("div").bind("click", function () {
-        $(this).hide(500);
+    $("span").bind("click", function () {
+        $(this).parents("div").hide(500);
     });
 
     /////////////////////////// FAQ.
@@ -136,23 +136,35 @@
 
     /////////////////////////// FUNC FACTS.
     $("#yellow").bind("click", function () {
-        $("ul").each(function() {
+        $("ul").each(function () {
             $(this).children("li").last().css("background-color", "#fcff6a");
         });
 
     });
 
     //////
-    $("h3").bind("click", function() {
-        $("ul").each(function () {
-            $(this).children("li").first().css("font-weight", "bold");
-        });
+    $("h3").bind("click", function () {
+        $(this).next("ul").children("li").first().css("font-weight", "bold");
+
     });
 
     //////
-    $("li").bind("click", function() {
+    $("li").bind("click", function () {
         $(this).parents("ul").children("li").first().css("color", "blue");
     });
+
+    //////
+    $(".facts").hide();
+
+    $("h3").bind("click", function() {
+        $(this).next("ul").slideToggle();
+    });
+
+    setTimeout(function() {
+        $("h2").fadeIn();
+    }, 1000);
+
+
 
 </script>
 
