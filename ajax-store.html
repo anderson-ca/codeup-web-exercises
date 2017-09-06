@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+</head>
+<body>
+
+<h1>My Tool Store</h1>
+
+<table id="products">
+    <button id="refresh">Refresh</button>
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Categories</th>
+    </tr>
+    </thead>
+    <tbody id="insertProducts">
+
+    </tbody>
+</table>
+
+<script src="js/jquery-2.2.4.min.js"></script>
+
+<script>
+    (function () {
+        "use strict";
+
+        /////////////////////////////////////////////// REFRESH BUTTON. ///////////////////////////////////////////////
+        var refresh = $("#refresh");
+
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////// FUNCTION REFRESHING THE TABLE OF CONTENTS //////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        var loadInventory = function () {
+
+            var ajax = $.ajax("data/inventory.json");
+
+            var myTable = $("#insertProducts");
+
+            ajax.done(function (data, status, jqXhr) {
+
+                data.forEach(function (item) {
+
+                    myTable.append("<tr>" + "<td>" + item.title + "</td>" + "<td>" + item.quantity + "</td>" + "<td>" + item.price + "</td>" + "<td>" + item.categories + "</td>" + "<tr>");
+
+                });
+            });
+        };
+
+        //////////////////////// EVENT BINDING BUTTON TO THE AJAX CALL REFRESHING THE TABLE /////////////////////////////
+        refresh.bind("click", loadInventory);
+
+        //////////////////////////// FUNCTION CALL FOR THE EVENT LOADING THE INVENTORY /////////////////////////////////
+        loadInventory();
+
+    })();
+</script>
+
+</body>
+</html>
