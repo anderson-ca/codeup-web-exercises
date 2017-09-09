@@ -10,130 +10,87 @@
 
 <script>
     "use strict";
-    // Hex Clock.
-
-//    (function () {
-
-        // CREATE HELPER FUNCTION TO HAVE ACCESS TO DATE, HOURS, MINUTES, AND SECONDS.
-        function time() {
-            var date = new Date();
-
-            var hours = date.getHours();
-
-            var minutes = date.getMinutes();
-
-            var seconds = date.getSeconds();
 
 
-            var list = [hours, minutes, seconds].map(function (num) {
+    // CREATE HELPER FUNCTION TO HAVE ACCESS TO DATE, HOURS, MINUTES, AND SECONDS.
+    function time() {
+        var date = new Date();
 
-                return num < 10 ? "0" + num : String(num);
+        var hours = date.getHours();
 
-            });
+        var minutes = date.getMinutes();
 
-            hours = list[0];
+        var seconds = date.getSeconds();
 
-            minutes = list[1];
+        var list = [hours, minutes, seconds].map(function (num) {
 
-            seconds = list[2];
+            return num < 10 ? "0" + num : String(num);
 
-            return hours + minutes + seconds;
+        });
 
-        }
+        hours = list[0];
 
-        function output(time) {
+        minutes = list[1];
 
-            var color = "#" + time;
+        seconds = list[2];
 
-            document.body.bgColor = color;
+        return hours + minutes + seconds;
 
-            document.body.textContent = color;
+    }
 
-            document.body.style.color = "#fff";
+    function output(time) {
 
-            document.body.style.fontSize = "100PX";
+        var color = "#" + time;
 
-            document.body.style.textAlign = "center";
+        document.body.bgColor = color;
 
-            document.body.style.height = "100vh";
+        document.body.textContent = color;
 
-        }
+        document.body.style.color = "#fff";
 
-        function startClock(callback, name) {
+        document.body.style.fontSize = "100PX";
 
-            document.body.addEventListener("dblclick", function(){
+        document.body.style.textAlign = "center";
 
-                callback(name);
+        document.body.style.height = "100vh";
 
-            });
+    }
 
-        }
+    function startClock(callback, name) {
 
-        function stopClock(callback, name) {
+        document.body.addEventListener("dblclick", function () {
 
-            document.body.addEventListener("click", function(){
+            callback(name);
 
-                callback(name);
+        });
 
-            });
+    }
 
-        }
+    function stopClock(callback, name) {
 
-        function init() {
+        document.body.addEventListener("click", function () {
 
-            var tickTock = setInterval(function (){
+            callback(name);
 
-                output(time());
+        });
 
-            }, 1000);
+    }
 
-            stopClock(clearInterval, tickTock);
+    function init() {
 
-            startClock(init, tickTock);
+        var tickTock = setInterval(function () {
 
-        }
+            output(time());
 
-        init();
+        }, 1000);
 
+        stopClock(clearInterval, tickTock);
 
-        //        function fullScreen(element) {
-        //
-        //            var newElement = document.createElement(element);
-        //
-        //            newElement.style.height = "100vh";
-        //
-        //            document.body.appendChild(newElement);
-        //
-        //            return newElement;
-        //
-        //        }
-        //
-        //        function input(inputType, DOMElement, callback) {
-        //
-        //            DOMElement.addEventListener(inputType, function () {
-        //
-        //                var x = event.clientX;
-        //
-        //                var y = event.clientY;
-        //
-        //                callback(DOMElement, x, y);
-        //
-        //            });
-        //
-        //        }
-        //
-        //        function output(element, x, y) {
-        //
-        //            element.textContent = x + ", " + y;
-        //
-        //            element.style.backgroundColor = "rgb(" + x + ", " + y + ", 100)";
-        //
-        //        }
-        //
-        //        input("mousemove", fullScreen("div"), output);
+        startClock(init, tickTock);
 
-//    })();
+    }
 
+    init();
 </script>
 </body>
 </html>

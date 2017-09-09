@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather Api</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/weather-map.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Josefin+Sans|Titillium+Web" rel="stylesheet">
+</head>
+<body>
+<h1 class="text-center header-text">Weather Application</h1>
+<div id="input-area">
+    <input type="text" id="user-input">
+    <button id="submit">enter</button>
+</div>
+<div id="for0" class="forecast"></div>
+<div id="for1" class="forecast"></div>
+<div id="for2" class="forecast"></div>
+<div class="map"></div>
+<!--------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------- GOOGLE MAPS ------------------------------------------------------>
+<!--------------------------------------------------------------------------------------------------------------------->
+<div id="map-canvas"></div>
+
+
+<!--------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------->
+<script src="js/jquery-2.2.4.min.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4oZM_9jWPZ7n7XYtWS1CY9eSBbxJRVdM"></script>
+
+<script>
+
+    var submit = $("#submit");
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////
+
+    var getWeather = function (weather) {
+
+        var weatherThing = $.get("http://api.openweathermap.org/data/2.5/forecast", {
+            APPID: "07099172fe609f5517481eb2e1e81cf4",
+            q: weather,
+            units: "imperial",
+            cnt: 3
+        });
+
+        weatherThing.done(function (data) {
+            console.log(data);
+            var html = $(".forecast");
+            var containers = [$("#for0"), $("#for1"), $("#for2")];
+            var ul = "<ul>";
+            data.list.forEach(function (day, i) {
+                containers[i].html(ul + "<li id='first'>" + parseInt(day.main.temp_max) + "º" + " / " + parseInt(day.main.temp_min) + "º" + "</li>" + " <li>" + "<img src='http://openweathermap.org/img/w/" + day.weather[0].icon + ".png'>" + "</li>" + "<li>" + "Humidity: " + day.main.humidity + "</li>" + "<li>" + "Wind: " + day.wind.speed + "</li>" + "<li>" + "Pressure: " + day.main.pressure + "</li>");
+                containers[i].append("</ul>");
+                $("ul").css("listStyle", "none");
+                console.log(data.list)
+            })
+        });
+    };
+
+    ///////////////////////////////////////////////////////////////////////////////////////
+
+    submit.bind("click", function () {
+
+        var user_input = $("#user-input").val();
+
+        console.log(user_input);
+
+        getWeather(user_input);
+
+        getGeoLocation(user_input);
+
+
+    });
+
+    ///////////////////////////////////////////////////////////////////////////////////////
+
+    // Set our map options
+    var mapOptions = {
+        // Set the zoom level
+        zoom: 15,
+
+        // This sets the center of the map at our location
+        center: {
+            lat: 29.426791,
+            lng: -98.489602
+        }
+    };
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////
+
+    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+    //////////////////////////////////////////////////////////////////////////////////////
+
+    var getGeoLocation = function (place) {
+
+        // Init geocoder object
+        var geocoder = new google.maps.Geocoder();
+
+        // Geocode our address
+        geocoder.geocode({"address": place}, function (results, status) {
+
+            // Check for a successful result
+            if (status == google.maps.GeocoderStatus.OK) {
+
+                // Recenter the map over the address
+                map.setCenter(results[0].geometry.location);
+            } else {
+
+                // Show an error message with the status if our request fails
+                alert("Geocoding was not successful - STATUS: " + status);
+            }
+
+
+            var spot = {
+                lat: results[0].geometry.location.lat(),
+                lng: results[0].geometry.location.lng()
+            };
+
+            var marker = new google.maps.Marker({
+                position: spot,
+                map: map
+            });
+
+        });
+
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+</script>
+</body>
+</html>
