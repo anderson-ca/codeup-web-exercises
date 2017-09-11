@@ -9,23 +9,35 @@
     <link href="https://fonts.googleapis.com/css?family=Dosis|Josefin+Sans|Titillium+Web" rel="stylesheet">
 </head>
 <body>
+<!--------------------------------------------------------------------------------------------------------------------->
+<!----------------------------------------------------- HEADER -------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------->
 <h1 class="text-center header-text">Weather Application</h1>
+
+<!--------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------- USER INPUT AREA -------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------->
 <div id="input-area">
     <input type="text" id="user-input">
     <button id="submit">enter</button>
 </div>
+
+<!--------------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------- WEATHER INFO DISPLAY AREA ---------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------->
 <div id="for0" class="forecast"></div>
 <div id="for1" class="forecast"></div>
 <div id="for2" class="forecast"></div>
 <div class="map"></div>
+
 <!--------------------------------------------------------------------------------------------------------------------->
-<!-------------------------------------------------- GOOGLE MAPS ------------------------------------------------------>
+<!--------------------------------------------- GOOGLE MAPS CANVAS DISPLAY -------------------------------------------->
 <!--------------------------------------------------------------------------------------------------------------------->
 <div id="map-canvas"></div>
 
 
 <!--------------------------------------------------------------------------------------------------------------------->
-<!--------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------- SCRIPT AREA  ---------------------------------------------------->
 <!--------------------------------------------------------------------------------------------------------------------->
 <script src="js/jquery-2.2.4.min.js"></script>
 
@@ -37,9 +49,13 @@
 
 
     ////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////// GETTING WEATHER INFO FROM WEATHER API ///////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////
 
+    ///////////////////////////////////////// FUNCTION TAKING THE AJAX CALL TO WEATHER API AND ADDING ARGUMENT TO LOCATION AREA.
     var getWeather = function (weather) {
 
+        ///////////////////////////////////// ADDING THE AJAX CALL TO TO A VARIABLE.
         var weatherThing = $.get("http://api.openweathermap.org/data/2.5/forecast", {
             APPID: "07099172fe609f5517481eb2e1e81cf4",
             q: weather,
@@ -47,81 +63,93 @@
             cnt: 3
         });
 
+        ///////////////////////////////////// DONE CALLBACK FUNCTION.
         weatherThing.done(function (data) {
-            console.log(data);
+
             var html = $(".forecast");
+
             var containers = [$("#for0"), $("#for1"), $("#for2")];
+
             var ul = "<ul>";
+
             data.list.forEach(function (day, i) {
+
+                ///////////////////////////// ADDING UNORDERED LIST TO PAGE. WITH INFO RETRIEVED FROM THE API DATABASE.
                 containers[i].html(ul + "<li id='first'>" + parseInt(day.main.temp_max) + "º" + " / " + parseInt(day.main.temp_min) + "º" + "</li>" + " <li>" + "<img src='http://openweathermap.org/img/w/" + day.weather[0].icon + ".png'>" + "</li>" + "<li>" + "Humidity: " + day.main.humidity + "</li>" + "<li>" + "Wind: " + day.wind.speed + "</li>" + "<li>" + "Pressure: " + day.main.pressure + "</li>");
+
                 containers[i].append("</ul>");
+
                 $("ul").css("listStyle", "none");
+
                 console.log(data.list)
             })
         });
     };
 
-    ///////////////////////////////////////////////////////////////////////////////////////
-
+    ////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////// EVENT LISTENER BINDING FUNCTION TO BUTTON ///////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////
     submit.bind("click", function () {
 
         var user_input = $("#user-input").val();
 
-        console.log(user_input);
-
+        ////////////////////////////////// GET WEATHER FUNCTION CALL.
         getWeather(user_input);
 
+        ////////////////////////////////// GET GET GEOLOCATION FUNCTION CALL.
         getGeoLocation(user_input);
-
 
     });
 
-    ///////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////// GENERATING GOOGLE MAPS ////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////
 
-    // Set our map options
+    ////////////////////////////////////// SET UP MAP OPTIONS OBJECT.
     var mapOptions = {
-        // Set the zoom level
+        ////////////////////////////////// SET UP ZOOM LEVEL.
         zoom: 15,
 
-        // This sets the center of the map at our location
+        ////////////////////////////////// SETS THE CENTER FOR THE MAP.
         center: {
             lat: 29.426791,
             lng: -98.489602
         }
     };
 
-
-    ///////////////////////////////////////////////////////////////////////////////////////
-
+    ////////////////////////////////////// RENDER MAP.
     var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
-    //////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////// GENERATING THE GEOLOCATION FUNCTION ///////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////
 
     var getGeoLocation = function (place) {
 
-        // Init geocoder object
+        /////////////////////////////////// INITIALIZING THE GEOCODER OBJECT.
         var geocoder = new google.maps.Geocoder();
 
-        // Geocode our address
+        ////////////////////////////////// GEOCODE THE ADDRESS.
         geocoder.geocode({"address": place}, function (results, status) {
 
-            // Check for a successful result
+            ////////////////////////////// CHECK FOR SUCCESSFUL RESULT.
             if (status == google.maps.GeocoderStatus.OK) {
 
-                // Recenter the map over the address
+                ////////////////////////// RE-CENTER MAP OVER THE NEW ADDRESS.
                 map.setCenter(results[0].geometry.location);
             } else {
 
-                // Show an error message with the status if our request fails
+                ////////////////////////// IF REQUEST FAILS SHOW MESSAGE WITH STATUS.
                 alert("Geocoding was not successful - STATUS: " + status);
             }
 
-
+            ////////////////////////////// SPOT OBJECT.
             var spot = {
                 lat: results[0].geometry.location.lat(),
                 lng: results[0].geometry.location.lng()
             };
 
+            ////////////////////////////// GENERATE MARKER USING SPOT LOCATION.
             var marker = new google.maps.Marker({
                 position: spot,
                 map: map
@@ -130,7 +158,6 @@
         });
 
     }
-
     //////////////////////////////////////////////////////////////////////////////////////////
 </script>
 </body>

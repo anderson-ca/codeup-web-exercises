@@ -1,3 +1,4 @@
+
 /*************************************************
 
     GENERAL BODY AND HTML STYLING.
@@ -143,9 +144,11 @@ h2 {
 }
 
 .img-test {
+    position: relative;
     height: 170px;
     width: 170px;
     margin: 100px 0 60px 0;
+    bottom: -120px;
 
 }
 

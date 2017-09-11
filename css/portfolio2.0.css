@@ -1,0 +1,34 @@
+/*************************************************
+
+GENERAL BODY AND HTML STYLING.
+
+**************************************************/
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    border: 1px solid #000;
+}
+
+.col {
+    border: 1px solid #000;
+}
+
+/*******************************************
+
+    Extra-Small screen header styling
+
+*********************************************/
+
+@media (max-width: 768px) {
+
+}
+
+

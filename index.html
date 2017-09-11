@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/actual-portfolio.css">
     <link href="https://fonts.googleapis.com/css?family=Dosis|Josefin+Sans|Titillium+Web" rel="stylesheet">
     <style></style>
     <title>Title</title>
@@ -98,6 +98,7 @@
         </p>
     </div>
 </div>
+
 <script src="js/jquery-2.2.4.min.js">
 </script>
 <script>
@@ -105,11 +106,13 @@
 
     $(document).ready(function () {
 
+        var thirdRow = $("#third-row");
 
         var img = $(".img-test");
 
-        img.bind("mouseover",  function(){
-            $(".third-block-text").fadeIn(5000);
+        thirdRow.bind("mouseover",  function(){
+            $(".third-block-text").fadeIn(2000);
+            img.css("top", "-30px");
         });
 
     });
