@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promises</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+
+    ///////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////
+    let wait = function (number) {
+
+        let myPromise = new Promise(function (resolved, rejected) {
+            setTimeout(function () {
+
+                if (!isNaN(number)) {
+                    resolved();
+                } else {
+                    rejected();
+                }
+
+            }, number);
+        });
+
+        myPromise.then(function () {
+            console.log(`You should see this after ${number} milliseconds`);
+        });
+
+        myPromise.catch(function () {
+            console.log("error");
+        });
+    };
+
+    console.log(wait(3000));
+
+    ///////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////
+
+    let getLastCommit = function (user) {
+        return fetch(`https://api.github.com/users/${user}/events`, {header: {'Authorization': 'fbb4a973da33b5aed9beeb558a7283a10320a1cc'}})
+
+            .then(function (response) {
+
+                return response.json();
+
+
+            })
+
+            .then(function (event) {
+
+                console.log(event[0].created_at);
+
+            })
+
+
+    };
+
+    getLastCommit("andy1806");
+
+
+</script>
+</body>
+</html>
+
+

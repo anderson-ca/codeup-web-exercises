@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    const users = [
+        {
+            id: 1,
+            name: 'ryan',
+            email: 'ryan@codeup.com',
+            languages: ['clojure', 'javascript'],
+        },
+        {
+            id: 2,
+            name: 'luis',
+            email: 'luis@codeup.com',
+            languages: ['java', 'scala', 'php'],
+        },
+        {
+            id: 3,
+            name: 'zach',
+            email: 'zach@codeup.com',
+            languages: ['javascript', 'bash'],
+        },
+        {
+            id: 4,
+            name: 'fernando',
+            email: 'fernando@codeup.com',
+            languages: ['java', 'php', 'sql'],
+        },
+        {
+            id: 5,
+            name: 'justin',
+            email: 'justin@codeup.com',
+            languages: ['html', 'css', 'javascript', 'php'],
+        },
+    ];
+
+
+    ///////////////////////////////////////////////////////////////////////
+    /////////////////////////////// FILTER ////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////
+    let threeLang = users.filter(function (item) {
+        if (item.languages.length >= 3) {
+
+            return item;
+
+        }
+    });
+
+    console.log(threeLang);
+
+    ///////////////////////////////////////////////////////////////////////
+    ///////////////////////////////// MAP /////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////
+    let emailList = users.map(function (item) {
+
+        return item.email;
+
+    });
+
+    console.log(emailList);
+
+    ///////////////////////////////////////////////////////////////////////
+    ///////////////////////////////// reduce //////////////////////////////
+    ///////////////////////////////////////////////////////////////////////
+    let instructers = users.reduce(function (result, item) {
+
+        result[item.id] = item;
+
+        return result;
+
+    }, {});
+
+    console.log(instructers);
+
+
+</script>
+</body>
+</html>
